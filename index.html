@@ -8,43 +8,109 @@
 
     <title>Chef Demo</title>
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="navbar.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-    <div class="container">
-      <div class="navbar navbar-inverse" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">Chef Demo</a>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar navbar-inverse navbar-static" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">Chef Demo</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="jumbotron">
-        <h2>Chef</h2>
-        <ul>
-          <li><a href="http://www.getchef.com/">Chef Main Site</a></li>
-          <li><a href="http://docs.opscode.com/">Chef Documentation</a></li>
-          <li><a href="https://learnchef.opscode.com/">Learn Chef</a></li>
-          <li><a href="http://pages.opscode.com/rs/opscode/images/ForresterITSpeedEnterprise.pdf">Forrester IT Speed Study</a></li>
-        </ul>
-        <h2>Helpful Chef Tools</h2>
-        <ul>
-          <li><a href="https://github.com/test-kitchen/test-kitchen">Test Kitchen</a></li>
-          <li><a href="http://code.sethvargo.com/chefspec/">ChefSpec</a></li>
-          <li><a href="http://berkshelf.com/">Berkshelf</a></li>
-          <li><a href="https://github.com/calavera/minitest-chef-handler">Mini-Test Handler</a></li>
-        </ul>
-        <h2>Misc Links</h2>
-        <ul>
-          <li><a href="http://www.vagrantup.com/">Vagrant</a></li>
-          <li><a href="https://github.com/TAMUArch/magic">This Site</a></li>
-          <li><a href="https://github.com/TAMUArch/chef-magic">Cookbook to deploy this site</a></li>
-          <li><a href="https://github.com/tamucookbooks">TAMU Cookbooks Github Organization</a></li>
-          <li><a href="https://www.docker.io/">Docker</a></li>
-        </ul>
+    </div>
+    <div id="linkCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="linkCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="linkCarousel" data-slide-to="1"></li>
+        <li data-target="linkCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Site Deployed using Chef</h1>
+              <h3>
+                Take the plunge to Learn Chef and click the link below.
+              </h3>
+              <p>
+                <a class="btn btn-lg btn-primary" href="https://learnchef.opscode.com">Learn Chef</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Forrester IT Speed Paper</h1>
+              <h3>Check out the excellent Forrester IT Paper on automation.</h3>
+              <p>
+                <a class="btn btn-lg btn-primary" href="http://pages.opscode.com/rs/opscode/images/ForresterITSpeedEnterprise.pdf">Forrester Paper</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Testing</h1>
+              <h3>Click below to learn more about the most popular Chef testing tool.</h3>
+              <p>
+                <a class="btn btn-lg btn-primary" href="https://github.com/test-kitchen/test-kitchen">Test Kitchen</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#linkCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#linkCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="container">
+            <h2>Chef</h2>
+            <ul>
+              <li><a href="http://www.getchef.com/">Chef Main Site</a></li>
+              <li><a href="http://docs.opscode.com/">Chef Documentation</a></li>
+              <li><a href="https://learnchef.opscode.com/">Learn Chef</a></li>
+              <li><a href="http://pages.opscode.com/rs/opscode/images/ForresterITSpeedEnterprise.pdf">Forrester IT Speed Study</a></li>
+            </ul>
+            <h2>Helpful Chef Tools</h2>
+            <ul>
+              <li><a href="https://github.com/test-kitchen/test-kitchen">Test Kitchen</a></li>
+              <li><a href="http://code.sethvargo.com/chefspec/">ChefSpec</a></li>
+              <li><a href="http://berkshelf.com/">Berkshelf</a></li>
+              <li><a href="https://github.com/calavera/minitest-chef-handler">Mini-Test Handler</a></li>
+            </ul>
+            <h2>Misc Links</h2>
+            <ul>
+              <li><a href="http://www.vagrantup.com/">Vagrant</a></li>
+              <li><a href="https://github.com/TAMUArch/magic">This Site</a></li>
+              <li><a href="https://github.com/TAMUArch/chef-magic">Cookbook to deploy this site</a></li>
+              <li><a href="https://github.com/tamucookbooks">TAMU Cookbooks Github Organization</a></li>
+              <li><a href="https://www.docker.io/">Docker</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Deploy this site for yourself</h2>
+          <p>
+            You will need <a href="https://www.virtualbox.org/">Virtualbox</a> and <a href="http://www.vagrantup.com/">Vagrant</a> installed.
+            Once both of those are installed run the following commands:
+            </br></br>vagrant plugin install vagrant-berkshelf
+            </br>vagrant plugin install vagrant-omnibus
+            </br>vagrant up
+            </br>
+            </br>This site should now be reachable locally via http://localhost:8080
+          </p>
+        </div>
       </div>
     </div>
   </body>

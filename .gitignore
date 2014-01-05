@@ -6,6 +6,9 @@ lib-cov
 *.out
 *.pid
 *.gz
+.chef/cookbooks
+.chef/Berksfile.lock
+.gitignore
 
 pids
 logs

@@ -9,6 +9,7 @@ lib-cov
 .chef/cookbooks
 .chef/Berksfile.lock
 .gitignore
+.vagrant
 
 pids
 logs

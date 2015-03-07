@@ -2,6 +2,11 @@
 revision:
   default: testing
   production: testing
+migrate:
+  default: false
+  _default: true
+migration_command:
+  default: rake task
 after_checkout:
   execute_touch:
     command: 'touch /tmp/something'

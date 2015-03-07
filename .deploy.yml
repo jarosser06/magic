@@ -1,0 +1,7 @@
+---
+revision:
+  - default: master
+  - production: testing
+after_checkout:
+  execute_touch:
+    - command: 'touch /tmp/something'

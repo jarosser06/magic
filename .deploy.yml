@@ -1,6 +1,6 @@
 ---
 revision:
-  default: master
+  default: testing
   production: testing
 after_checkout:
   execute_touch:

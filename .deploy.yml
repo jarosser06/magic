@@ -6,7 +6,7 @@ migrate:
   default: false
   _default: true
 migration_command:
-  default: rake task
+  default: ls /tmp
 after_checkout:
   execute_touch:
     command: 'touch /tmp/something'

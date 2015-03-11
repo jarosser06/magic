@@ -1,7 +1,7 @@
 ---
 revision:
   default: testing
-  production: testing
+  production: master
 migrate:
   default: false
   _default: true
